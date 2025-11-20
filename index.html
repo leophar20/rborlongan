@@ -1,1 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Raphael Borlongan | IT & Cybersecurity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio website for Raphael Borlongan, IT System Administrator and cybersecurity professional." />
 
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --text-main: #e5e7eb;
+      --text-muted: #94a3b8;
+      --border-subtle: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at 30% 10%, #38bdf8, #0f172a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #e5f3ff;
+    }
+
+    .brand-text h1 {
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .brand-text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    nav a {
+      font-size: 0.9rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      border-color: var(--accent-soft);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    .pill-primary {
+      border-color: var(--accent-soft);
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 1.75rem;
+    }
+
+    @media (max-width: 850px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.85);
+      border-radius: 1.2rem;
+      border: 1px solid var(--border-subtle);
+      padding: 1.5rem 1.4rem;
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(20px);
+    }
+
+    .card:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .card-tag {
+      font-size: 0.75rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .hero-title {
+      font-size: 1.75rem;
+      font-weight: 650;
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      background: #020617;
+    }
+
+    .chip-strong {
+      border-color: rgba(56, 189, 248, 0.5);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.75rem;
+    }
+
+    .btn {
+      font-size: 0.85rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #020617;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .btn-secondary {
+      border-color: var(--border-subtle);
+      background: transparent;
+      color: var(--text-main);
+    }
+
+    .btn span {
+      font-size: 1rem;
+    }
+
+    .list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .list-item-title {
+      font-weight: 500;
+    }
+
+    .list-item-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .list-item-bullets {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+
+    .badge {
+      font-size: 0.74rem;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+    }
+
+    .badge-highlight {
+      border-color: rgba(56, 189, 248, 0.4);
+      color: var(--accent);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="brand">
+        <div class="avatar">RB</div>
+        <div class="brand-text">
+          <h1>Raphael Borlongan</h1>
+          <p>IT System Administrator · Cybersecurity & Cloud Enthusiast</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#experience" class="pill-primary">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <section>
+        <article class="card">
+          <div class="card-header">
+            <h2 class="card-title">Overview</h2>
+            <span class="card-tag">rborlongan</span>
+          </div>
+          <h3 class="hero-title">
+            I design, deploy, and secure modern Windows & cloud environments.
+          </h3>
+          <p class="hero-subtitle">
+            IT System Administrator with hands-on experience in Microsoft 365, Intune/Endpoint Manager,
+            Entra ID, and on-prem AD. Passionate about automation, endpoint security, and building reliable
+            infrastructure for people who depend on it every day.
+          </p>
+
+          <div class="btn-row">
+            <a href="#contact" class="btn">
+              <span>➜</span> Contact / Work with me
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              View technical projects
+            </a>
+          </div>
+
+          <div class="chips">
+            <span class="chip chip-strong">Intune & Autopilot</span>
+            <span class="chip">Entra ID / Azure AD</span>
+            <span class="chip">M365 Administration</span>
+            <span class="chip">Endpoint Security</span>
+            <span class="chip">PowerShell Automation</span>
+          </div>
+        </article>
+
+        <article class="card" id="experience">
+          <div class="card-header">
+            <h2 class="card-title">Experience</h2>
+          </div>
+          <ul class="list">
+            <li>
+              <div class="list-item-title">
+                IT System Administrator · <span style="color: var(--text-muted)">SFCJL / Hebrew Home</span>
+              </div>
+              <div class="list-item-meta">
+                San Francisco Bay Area · 20XX – Present
+              </div>
+              <div class="list-item-bullets">
+                – Manage Intune, Autopilot, and device compliance policies for a mixed Windows environment.<br />
+                – Administer Microsoft 365, Entra ID, and on-prem Active Directory for end users and staff.<br />
+                – Build PowerShell scripts for reporting, user management, and endpoint automation.<br />
+                – Collaborate with leadership to improve security posture, patching, and user experience.
+              </div>
+            </li>
+
+            <!-- Add more roles as needed -->
+            <li>
+              <div class="list-item-title">
+                IT Support / Systems Technician (Various Roles)
+              </div>
+              <div class="list-item-meta">
+                20XX – 20XX
+              </div>
+              <div class="list-item-bullets">
+                – Provided end-user support for Windows, Office, networking, and SaaS platforms.<br />
+                – Deployed and imaged endpoints, troubleshot connectivity, and documented procedures.<br />
+                – Supported small IT projects, including migrations and hardware refreshes.
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" id="projects">
+          <div class="card-header">
+            <h2 class="card-title">Highlighted Projects & Labs</h2>
+          </div>
+          <ul class="list">
+            <li>
+              <div class="list-item-title">
+                Windows 10 → Windows 11 Migration via Intune & Autopilot
+              </div>
+              <div class="list-item-meta">
+                Endpoint Management · Cloud Policy · User Experience
+              </div>
+              <div class="list-item-bullets">
+                – Designed and tested Intune configuration profiles and update rings for Windows 11 rollout.<br />
+                – Used Autopilot, dynamic groups, and compliance policies for streamlined provisioning.<br />
+                – Documented process for help desk and future migrations.
+              </div>
+            </li>
+
+            <li>
+              <div class="list-item-title">
+                Home Lab: Proxmox, TrueNAS, Plex & AdGuard Home
+              </div>
+              <div class="list-item-meta">
+                Virtualization · Storage · Networking
+              </div>
+              <div class="list-item-bullets">
+                – Built a home lab with Proxmox containers/VMs and TrueNAS-backed storage.<br />
+                – Deployed Plex, Nextcloud-style storage, and AdGuard for DNS-level filtering.<br />
+                – Experimented with RAID, datasets, and backup strategies for a family of 6+ users.
+              </div>
+            </li>
+
+            <li>
+              <div class="list-item-title">
+                Cybersecurity Practice & Certification Labs
+              </div>
+              <div class="list-item-meta">
+                Offensive & Defensive Skills · CompTIA Track
+              </div>
+              <div class="list-item-bullets">
+                – Completed labs aligned with CySA+/PenTest+ and blue-team techniques.<br />
+                – Practiced vulnerability scanning, privilege escalation, and SIEM-style log analysis.<br />
+                – Built repeatable note-taking and documentation habits for real-world investigations.
+              </div>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <article class="card" id="skills">
+          <div class="card-header">
+            <h2 class="card-title">Skills & Tools</h2>
+          </div>
+          <div>
+            <strong>Platforms & Admin:</strong>
+            <div class="badge-row">
+              <span class="badge badge-highlight">Microsoft Intune</span>
+              <span class="badge">Entra ID / Azure AD</span>
+              <span class="badge">Microsoft 365</span>
+              <span class="badge">Windows Server & AD</span>
+              <span class="badge">Proxmox</span>
+              <span class="badge">TrueNAS / NAS</span>
+            </div>
+
+            <strong style="display:block; margin-top:0.7rem;">Security & Networking:</strong>
+            <div class="badge-row">
+              <span class="badge">Endpoint security</span>
+              <span class="badge">Patch management</span>
+              <span class="badge">Network troubleshooting</span>
+              <span class="badge">Wi-Fi analysis</span>
+            </div>
+
+            <strong style="display:block; margin-top:0.7rem;">Scripting & Tools:</strong>
+            <div class="badge-row">
+              <span class="badge">PowerShell</span>
+              <span class="badge">Automation scripts</span>
+              <span class="badge">Git/GitHub</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="education">
+          <div class="card-header">
+            <h2 class="card-title">Education & Certifications</h2>
+          </div>
+          <ul class="list">
+            <li>
+              <div class="list-item-title">
+                B.S. Cybersecurity & Information Assurance (in progress)
+              </div>
+              <div class="list-item-meta">
+                Western Governors University (WGU)
+              </div>
+            </li>
+            <li>
+              <div class="list-item-title">
+                Industry Certifications
+              </div>
+              <div class="list-item-bullets">
+                – CompTIA (A+, Network+, CySA+, PenTest+ – adjust as applicable)<br />
+                – Other security / cloud certs (add specific names and years).
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="card" id="contact">
+          <div class="card-header">
+            <h2 class="card-title">Contact & Links</h2>
+          </div>
+          <div class="contact-row">
+            <div>
+              <strong>Email:</strong>
+              <br />
+              <a href="mailto:youremail@example.com">youremail@example.com</a>
+            </div>
+            <div>
+              <strong>LinkedIn:</strong>
+              <br />
+              <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                linkedin.com/in/your-profile
+              </a>
+            </div>
+            <div>
+              <strong>GitHub:</strong>
+              <br />
+              <a href="https://github.com/rborlongan" target="_blank">
+                github.com/rborlongan
+              </a>
+            </div>
+            <div>
+              <strong>Resume (PDF):</strong>
+              <br />
+              <span>Link to a downloadable resume once hosted.</span>
+            </div>
+          </div>
+        </article>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Raphael Borlongan · Built by hand with HTML & CSS
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

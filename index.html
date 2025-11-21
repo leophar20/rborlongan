@@ -425,36 +425,41 @@
       background: var(--accent-soft);
     }
 
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-     .portrait-wrapper {
-      align-self: flex-start;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 0.6rem;
-    }
+  .hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
 
-    .portrait-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid rgba(148, 163, 184, 0.9);
-      box-shadow:
-        0 0 18px rgba(34, 211, 238, 0.7),
-        0 0 42px rgba(8, 47, 73, 0.9);
-      filter: saturate(1.05) contrast(1.02);
-    }
+.hero-photo-card {
+  padding: 0.35rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, rgba(34, 211, 238, 0.6), rgba(15, 23, 42, 0.9));
+  box-shadow:
+    0 0 22px rgba(34, 211, 238, 0.8),
+    0 0 60px rgba(8, 47, 73, 0.9);
+}
 
-    @media (max-width: 880px) {
-      .portrait-wrapper {
-        align-self: center;
-        margin-bottom: 0.8rem;
-      }
-    }
+.hero-portrait {
+  width: 175px;
+  height: 175px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(148, 163, 184, 0.9);
+  display: block;
+}
+
+@media (max-width: 880px) {
+  .hero-side {
+    margin-top: 1.2rem;
+  }
+
+  .hero-portrait {
+    width: 150px;
+    height: 150px;
+  }
+}
 
     .mini-card {
       background: rgba(15, 23, 42, 0.95);
@@ -673,10 +678,12 @@
       </article>
 
       <aside class="hero-side">
-        <div class="portrait-wrapper">
-      <img src="portrait-raphael.jpg"
-           alt="Professional portrait of Raphael Borlongan"
-           class="portrait-img" />
+       <div class="hero-photo-card">
+      <img
+        src="portrait-raphael.jpg"  <!-- change if your file name is different -->
+        alt="Professional portrait of Raphael Borlongan"
+        class="hero-portrait"
+      />
     </div>
         <div class="mini-card">
           <div class="mini-title">What I’m focused on now</div>

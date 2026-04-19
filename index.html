@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Raphael Borlongan | Security-Minded System Administrator</title>
+  <title>Raphael Borlongan | IT Engineer · SoftBank · Security-Focused</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Raphael Landre Borlongan, security-minded IT professional and system administrator specializing in MDM, endpoint security, and automation." />
+  <meta name="description" content="Portfolio of Raphael Landre Borlongan, IT Service Desk Engineer at SoftBank supporting enterprise environments. CompTIA A+, Security+, CySA+, SSCP certified. B.S. Cybersecurity." />
 
   <style>
     :root {
@@ -30,9 +30,7 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       min-height: 100vh;
@@ -42,22 +40,15 @@
       color: var(--text-main);
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    /* --- Layout --- */
     .page {
       max-width: 1120px;
       margin: 0 auto;
       padding: 0 1.5rem 3rem;
     }
 
-    /* --- Neon grid background --- */
     .grid-overlay {
       position: fixed;
       inset: 0;
@@ -91,103 +82,59 @@
       gap: 1rem;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
+    .logo { display: flex; align-items: center; gap: 0.6rem; }
 
     .logo-mark {
-      width: 36px;
-      height: 36px;
+      width: 36px; height: 36px;
       border-radius: 999px;
-      background:
-        radial-gradient(circle at 20% 0, #22d3ee, #0f172a);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1rem;
-      color: #e0f2fe;
+      background: radial-gradient(circle at 20% 0, #22d3ee, #0f172a);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem; color: #e0f2fe;
       border: 1px solid rgba(148, 163, 184, 0.7);
-      box-shadow:
-        0 0 15px rgba(56, 189, 248, 0.7),
-        0 0 40px rgba(8, 47, 73, 0.9);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.7), 0 0 40px rgba(8, 47, 73, 0.9);
     }
 
-    .logo-main {
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .logo-sub {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
+    .logo-main { font-size: 0.98rem; font-weight: 600; }
+    .logo-sub { font-size: 0.78rem; color: var(--text-muted); }
 
     .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      font-size: 0.83rem;
+      display: flex; flex-wrap: wrap; gap: 0.35rem; font-size: 0.83rem;
     }
 
     .nav-links a {
-      padding: 0.35rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-      text-decoration: none;
+      padding: 0.35rem 0.7rem; border-radius: 999px;
+      border: 1px solid transparent; color: var(--text-muted); text-decoration: none;
       transition: border-color 0.12s ease, color 0.12s ease, background 0.12s ease;
     }
 
     .nav-links a:hover {
       border-color: rgba(148, 163, 184, 0.4);
-      color: var(--text-main);
-      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-main); background: rgba(15, 23, 42, 0.9);
     }
 
     .nav-links a.primary {
       border-color: var(--accent-strong);
-      background: rgba(8, 47, 73, 0.9);
-      color: var(--accent);
+      background: rgba(8, 47, 73, 0.9); color: var(--accent);
       box-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
     }
 
     @media (max-width: 780px) {
-      .navbar-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .navbar-inner { flex-direction: column; align-items: flex-start; }
     }
 
     /* --- Section Layout --- */
+    section { padding: 3rem 0 1.5rem; }
 
-    section {
-      padding: 3rem 0 1.5rem;
-    }
-
-    .section-header {
-      margin-bottom: 1.2rem;
-    }
+    .section-header { margin-bottom: 1.2rem; }
     .section-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
+      font-size: 1.25rem; font-weight: 600;
+      display: inline-flex; align-items: center; gap: 0.4rem;
     }
     .section-title span {
-      font-size: 0.85rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
+      font-size: 0.85rem; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.12em;
     }
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
+    .section-subtitle { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; }
 
     .grid-2 {
       display: grid;
@@ -196,13 +143,10 @@
     }
 
     @media (max-width: 880px) {
-      .grid-2 {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .grid-2 { grid-template-columns: minmax(0, 1fr); }
     }
 
     /* --- Cards --- */
-
     .card {
       background: radial-gradient(circle at top left, rgba(34, 211, 238, 0.16), transparent 55%),
                   rgba(15, 23, 42, 0.96);
@@ -210,90 +154,59 @@
       border: 1px solid rgba(15, 23, 42, 0.95);
       box-shadow: var(--shadow-strong);
       padding: 1.5rem 1.4rem;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
 
     .card::before {
       content: "";
-      position: absolute;
-      inset: -40%;
-      opacity: 0;
+      position: absolute; inset: -40%; opacity: 0;
       background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(34, 211, 238, 0.18), transparent 60%);
-      transition: opacity 0.25s ease-out;
-      pointer-events: none;
+      transition: opacity 0.25s ease-out; pointer-events: none;
     }
 
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    .card + .card {
-      margin-top: 1rem;
-    }
+    .card:hover::before { opacity: 1; }
+    .card + .card { margin-top: 1rem; }
 
     .card-header-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 0.55rem;
-      gap: 0.5rem;
+      display: flex; align-items: baseline;
+      justify-content: space-between; margin-bottom: 0.55rem; gap: 0.5rem;
     }
 
-    .card-title {
-      font-size: 1rem;
-      font-weight: 600;
-    }
+    .card-title { font-size: 1rem; font-weight: 600; }
 
     .card-pill {
-      font-size: 0.72rem;
-      padding: 0.16rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent-strong);
-      background: var(--accent-soft);
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
+      font-size: 0.72rem; padding: 0.16rem 0.6rem;
+      border-radius: 999px; border: 1px solid var(--accent-strong);
+      background: var(--accent-soft); color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.12em;
+    }
+
+    .card-pill-new {
+      font-size: 0.72rem; padding: 0.16rem 0.6rem;
+      border-radius: 999px; border: 1px solid rgba(34, 197, 94, 0.5);
+      background: rgba(34, 197, 94, 0.1); color: #4ade80;
+      text-transform: uppercase; letter-spacing: 0.12em;
     }
 
     .item-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      font-size: 0.9rem;
+      list-style: none; display: flex; flex-direction: column;
+      gap: 0.85rem; font-size: 0.9rem;
     }
 
-    .item-title {
-      font-weight: 500;
-    }
-
-    .item-meta {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin: 0.12rem 0;
-    }
-
-    .item-body {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
+    .item-title { font-weight: 500; }
+    .item-meta { font-size: 0.78rem; color: var(--text-muted); margin: 0.12rem 0; }
+    .item-body { font-size: 0.86rem; color: var(--text-muted); line-height: 1.5; }
 
     /* --- Hero --- */
-
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 2fr) minmax(0, 1.25fr);
-      gap: 1.9rem;
-      padding-top: 2.3rem;
+      gap: 1.9rem; padding-top: 2.3rem;
       animation: fadeIn 0.7s ease-out;
     }
 
     @media (max-width: 880px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      .hero { grid-template-columns: minmax(0, 1fr); }
     }
 
     .hero-main {
@@ -302,323 +215,183 @@
         rgba(15, 23, 42, 0.98);
       border-radius: var(--radius-lg);
       border: 1px solid rgba(34, 211, 238, 0.3);
-      box-shadow:
-        0 0 40px rgba(8, 47, 73, 0.9),
-        0 0 80px rgba(8, 47, 73, 0.9);
+      box-shadow: 0 0 40px rgba(8, 47, 73, 0.9), 0 0 80px rgba(8, 47, 73, 0.9);
       padding: 1.7rem 1.5rem 1.6rem;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
 
     .hero-glow {
-      position: absolute;
-      inset: -20%;
+      position: absolute; inset: -20%;
       background:
         radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.4), transparent 60%),
         radial-gradient(circle at 100% 100%, rgba(248, 250, 252, 0.06), transparent 50%);
-      opacity: 0.25;
-      mix-blend-mode: screen;
-      pointer-events: none;
+      opacity: 0.25; mix-blend-mode: screen; pointer-events: none;
     }
 
     .hero-kicker {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
+      font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--accent); margin-bottom: 0.4rem;
     }
 
     .hero-title {
-      font-size: 2rem;
-      font-weight: 650;
-      line-height: 1.2;
-      margin-bottom: 0.7rem;
-      position: relative;
-      z-index: 1;
+      font-size: 2rem; font-weight: 650; line-height: 1.2;
+      margin-bottom: 0.7rem; position: relative; z-index: 1;
     }
 
-    .hero-title span {
-      color: var(--accent);
-    }
+    .hero-title span { color: var(--accent); }
 
     .hero-text {
-      font-size: 0.96rem;
-      color: #cbd5f5;
-      margin-bottom: 1.2rem;
-      max-width: 40rem;
-      position: relative;
-      z-index: 1;
+      font-size: 0.96rem; color: #cbd5f5; margin-bottom: 1.2rem;
+      max-width: 40rem; position: relative; z-index: 1;
     }
 
     .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      margin-bottom: 1rem;
-      position: relative;
-      z-index: 1;
+      display: flex; flex-wrap: wrap; gap: 0.7rem;
+      margin-bottom: 1rem; position: relative; z-index: 1;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.38rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 0.38rem;
+      padding: 0.6rem 1.2rem; border-radius: 999px;
       border: 1px solid var(--accent-strong);
       background: linear-gradient(to right, #06b6d4, #22c55e);
-      color: #020617;
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      box-shadow:
-        0 12px 35px rgba(34, 211, 238, 0.35),
-        0 0 40px rgba(8, 47, 73, 0.9);
+      color: #020617; font-size: 0.88rem; font-weight: 600;
+      text-decoration: none; cursor: pointer;
+      box-shadow: 0 12px 35px rgba(34, 211, 238, 0.35), 0 0 40px rgba(8, 47, 73, 0.9);
       transition: transform 0.1s ease, box-shadow 0.12s ease, filter 0.12s ease;
     }
 
-    .btn span {
-      font-size: 1.05rem;
-    }
+    .btn span { font-size: 1.05rem; }
 
     .btn:hover {
-      transform: translateY(-1px);
-      filter: brightness(1.05);
-      box-shadow:
-        0 18px 50px rgba(34, 211, 238, 0.5),
-        0 0 60px rgba(8, 47, 73, 0.9);
+      transform: translateY(-1px); filter: brightness(1.05);
+      box-shadow: 0 18px 50px rgba(34, 211, 238, 0.5), 0 0 60px rgba(8, 47, 73, 0.9);
     }
 
     .btn-secondary {
       border-color: rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.95);
-      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.95); color: var(--text-main);
       box-shadow: 0 10px 26px rgba(15, 23, 42, 0.9);
     }
 
-    .btn-secondary:hover {
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.95);
-    }
+    .btn-secondary:hover { box-shadow: 0 14px 30px rgba(15, 23, 42, 0.95); }
 
     .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.75rem;
-      position: relative;
-      z-index: 1;
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+      font-size: 0.75rem; position: relative; z-index: 1;
     }
 
     .tag {
-      padding: 0.24rem 0.65rem;
-      border-radius: 999px;
+      padding: 0.24rem 0.65rem; border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--text-muted);
-      background: rgba(15, 23, 42, 0.94);
+      color: var(--text-muted); background: rgba(15, 23, 42, 0.94);
     }
 
     .tag-strong {
       border-color: var(--accent-strong);
-      color: var(--accent);
-      background: var(--accent-soft);
+      color: var(--accent); background: var(--accent-soft);
     }
 
-  .hero-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
+    .hero-side {
+      display: flex; flex-direction: column; gap: 1rem; align-items: center;
+    }
 
-.hero-photo-card {
-  padding: 0.35rem;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 0, rgba(34, 211, 238, 0.6), rgba(15, 23, 42, 0.9));
-  box-shadow:
-    0 0 22px rgba(34, 211, 238, 0.8),
-    0 0 60px rgba(8, 47, 73, 0.9);
-}
+    .hero-photo-card {
+      padding: 0.35rem; border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, rgba(34, 211, 238, 0.6), rgba(15, 23, 42, 0.9));
+      box-shadow: 0 0 22px rgba(34, 211, 238, 0.8), 0 0 60px rgba(8, 47, 73, 0.9);
+    }
 
-.hero-portrait {
-  width: 175px;
-  height: 175px;
-  border-radius: 999px;
-  object-fit: cover;
-  border: 2px solid rgba(148, 163, 184, 0.9);
-  display: block;
-}
+    .hero-portrait {
+      width: 175px; height: 175px; border-radius: 999px;
+      object-fit: cover; border: 2px solid rgba(148, 163, 184, 0.9); display: block;
+    }
 
-@media (max-width: 880px) {
-  .hero-side {
-    margin-top: 1.2rem;
-  }
-
-  .hero-portrait {
-    width: 150px;
-    height: 150px;
-  }
-}
+    @media (max-width: 880px) {
+      .hero-side { margin-top: 1.2rem; }
+      .hero-portrait { width: 150px; height: 150px; }
+    }
 
     .mini-card {
       background: rgba(15, 23, 42, 0.95);
       border-radius: var(--radius-md);
       border: 1px solid var(--border-subtle);
-      padding: 1.05rem 1rem;
-      font-size: 0.86rem;
+      padding: 1.05rem 1rem; font-size: 0.86rem;
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.95);
     }
 
-    .mini-title {
-      font-weight: 600;
-      margin-bottom: 0.18rem;
-      font-size: 0.9rem;
-    }
-
-    .mini-muted {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-      line-height: 1.5;
-    }
+    .mini-title { font-weight: 600; margin-bottom: 0.18rem; font-size: 0.9rem; }
+    .mini-muted { color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; }
 
     /* --- Skills --- */
-
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-top: 0.35rem;
-    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.35rem; }
 
     .badge {
-      font-size: 0.74rem;
-      padding: 0.22rem 0.58rem;
-      border-radius: 999px;
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
+      font-size: 0.74rem; padding: 0.22rem 0.58rem; border-radius: 999px;
+      border: 1px solid var(--border-subtle); color: var(--text-muted);
       background: rgba(15, 23, 42, 0.95);
     }
 
-    .badge-highlight {
-      border-color: var(--accent-strong);
-      color: var(--accent);
-    }
+    .badge-highlight { border-color: var(--accent-strong); color: var(--accent); }
 
     /* --- Projects --- */
-
     .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.1rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.1rem;
     }
 
     .project-card {
       background: rgba(15, 23, 42, 0.98);
       border-radius: var(--radius-md);
       border: 1px solid var(--border-subtle);
-      padding: 1rem 1rem;
-      font-size: 0.86rem;
+      padding: 1rem; font-size: 0.86rem;
       box-shadow: 0 20px 40px rgba(15, 23, 42, 0.95);
-      position: relative;
-      overflow: hidden;
-      cursor: default;
+      position: relative; overflow: hidden; cursor: default;
       transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
     }
 
     .project-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
+      content: ""; position: absolute; inset: -40%;
       background: radial-gradient(circle at top right, rgba(34, 211, 238, 0.35), transparent 60%);
-      opacity: 0;
-      transition: opacity 0.18s ease-out;
+      opacity: 0; transition: opacity 0.18s ease-out;
     }
 
     .project-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--accent-strong);
+      transform: translateY(-2px); border-color: var(--accent-strong);
       box-shadow: 0 26px 60px rgba(15, 23, 42, 0.98);
     }
 
-    .project-card:hover::before {
-      opacity: 1;
-    }
+    .project-card:hover::before { opacity: 1; }
 
-    .project-title {
-      font-weight: 500;
-      margin-bottom: 0.2rem;
-    }
-
-    .project-meta {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .project-body {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-      line-height: 1.5;
-    }
+    .project-title { font-weight: 500; margin-bottom: 0.2rem; }
+    .project-meta { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.4rem; }
+    .project-body { font-size: 0.84rem; color: var(--text-muted); margin-bottom: 0.4rem; line-height: 1.5; }
 
     /* --- Contact --- */
-
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
       gap: 1.5rem;
     }
 
-    @media (max-width: 880px) {
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
+    @media (max-width: 880px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
 
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      font-size: 0.9rem;
-    }
-
-    .contact-line strong {
-      font-weight: 500;
-    }
-
-    .contact-line span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
+    .contact-links { display: flex; flex-direction: column; gap: 0.7rem; font-size: 0.9rem; }
+    .contact-line strong { font-weight: 500; }
+    .contact-line span { font-size: 0.8rem; color: var(--text-muted); }
 
     /* --- Footer --- */
-
     footer {
-      margin: 3rem 0 1.3rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
+      margin: 3rem 0 1.3rem; text-align: center;
+      font-size: 0.8rem; color: var(--text-muted);
     }
 
     /* --- Animations --- */
-
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .fade-in {
-      animation: fadeIn 0.6s ease-out;
-    }
-
+    .fade-in { animation: fadeIn 0.6s ease-out; }
   </style>
 </head>
 <body>
@@ -631,7 +404,7 @@
         <div class="logo-mark">RB</div>
         <div>
           <div class="logo-main">Raphael Landre Borlongan</div>
-          <div class="logo-sub">Security-Minded System Administrator · Cybersecurity Professional</div>
+          <div class="logo-sub">IT Engineer · SoftBank · Security-Focused IT Professional</div>
         </div>
       </div>
       <nav class="nav-links">
@@ -650,55 +423,55 @@
     <section class="hero" id="top">
       <article class="hero-main">
         <div class="hero-glow"></div>
-        <div class="hero-kicker">Security-Driven IT · MDM · Automation</div>
+        <div class="hero-kicker">Desktop Support · MDM · Identity & Access · Cybersecurity</div>
         <h1 class="hero-title">
-          I build <span>secure, well-managed</span> environments that let people focus on their work.
+          I keep <span>enterprise environments</span> secure, stable, and running smoothly.
         </h1>
         <p class="hero-text">
-          I’m Raphael, an IT professional with 4+ years of experience in system administration, endpoint
-          security, and user access management across Windows, Mac, and Linux environments. I specialize in
-          MDM, Microsoft 365 / Entra, and automation that reduces friction for both users and IT.
+          I'm Raphael, an IT professional with 4+ years of experience supporting corporate environments
+          across healthcare, tech, and global investment. Currently on-site at SoftBank's Menlo Park office
+          supporting a lean, high-impact IT team. I specialize in macOS & Windows support, device management
+          (Jamf, Intune), identity & access (Okta, Entra ID), and M365 — with a long-term focus on cybersecurity.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn">
             <span>➜</span> View highlighted projects
           </a>
-          <!-- TODO: update href once your resume PDF is hosted in the repo -->
           <a href="Resume%202025-%20Raphael.pdf" class="btn btn-secondary" target="_blank" rel="noopener">
             Download résumé (PDF)
           </a>
         </div>
         <div class="hero-tags">
-          <span class="tag tag-strong">MDM & Endpoint Security</span>
-          <span class="tag">Windows · Mac · Linux</span>
-          <span class="tag">Autopilot & GPO</span>
-          <span class="tag">PowerShell Automation</span>
-          <span class="tag">Security+, CySA+, SSCP</span>
+          <span class="tag tag-strong">@ SoftBank · Menlo Park</span>
+          <span class="tag">macOS · Windows · Linux</span>
+          <span class="tag">Jamf · Okta · Intune</span>
+          <span class="tag">Security+ · CySA+ · SSCP</span>
+          <span class="tag">B.S. Cybersecurity · WGU</span>
         </div>
       </article>
 
       <aside class="hero-side">
-       <div class="hero-photo-card">
-      <img
-        src="portrait-raphael.jpg"  
-        alt="Professional portrait of Raphael Borlongan"
-        class="hero-portrait"
-      />
-    </div>
+        <div class="hero-photo-card">
+          <img
+            src="portrait-raphael.jpg"
+            alt="Professional portrait of Raphael Borlongan"
+            class="hero-portrait"
+          />
+        </div>
         <div class="mini-card">
-          <div class="mini-title">What I’m focused on now</div>
+          <div class="mini-title">What I'm focused on now</div>
           <div class="mini-muted">
-            • Scaling MDM policies for mixed device fleets (iOS, Android, Windows).<br />
-            • Reducing post-deployment support time with Autopilot and GPO.<br />
-            • Tightening identity and access controls with Entra / Azure AD.<br />
-            • Growing deeper into cybersecurity while pursuing my B.S. in Cybersecurity.
+            • Supporting SoftBank's Menlo Park office — execs, onboarding, day-to-day IT ops.<br />
+            • Deepening Jamf, Okta, and macOS fleet management skills.<br />
+            • Building toward a security-focused or senior systems role long-term.<br />
+            • B.S. Cybersecurity completed — next up: career growth in security.
           </div>
         </div>
         <div class="mini-card">
           <div class="mini-title">How I like to work</div>
           <div class="mini-muted">
-            Clear communication, calm troubleshooting, and strong documentation. I enjoy taking messy processes,
-            simplifying them, and then using automation to keep things reliable.
+            Clear communication, calm troubleshooting, and strong documentation. I enjoy taking messy
+            processes, simplifying them, and using automation to keep things reliable.
           </div>
         </div>
       </aside>
@@ -711,21 +484,28 @@
           <div class="section-header">
             <h2 class="section-title">About <span>Profile</span></h2>
             <p class="section-subtitle">
-              A security-minded IT professional with a strong foundation in modern endpoint and identity management.
+              A security-minded IT professional with a strong foundation in endpoint management, identity, and enterprise support.
             </p>
           </div>
           <div class="card">
             <p class="item-body">
-              I’ve spent the last few years working across service desk, business analysis, and system
-              administration roles, giving me a full view of how people actually use technology day to day.
-              My experience includes managing MDM environments, implementing asset management systems, and
-              collaborating closely with engineers and managers to design secure and reliable workflows.
+              I've spent the last 4+ years working across service desk, business analysis, and system
+              administration roles — giving me a full picture of how people use technology day to day and
+              what breaks when systems aren't managed well. My experience spans macOS and Windows environments,
+              MDM platforms (Jamf, Intune, MaaS360), identity and access management (Okta, Entra ID),
+              and M365 administration.
             </p>
             <br />
             <p class="item-body">
-              I’m certified in Security+, CySA+, SSCP and other CompTIA core certifications, and I’m currently
-              pursuing a B.S. in Cybersecurity. My goal is to continue evolving from system administration
-              into a role that blends infrastructure, security, and automation.
+              I currently support SoftBank Group's Menlo Park office as a Desktop Support Engineer through
+              Saragossa Consulting — part of a lean, high-impact IT team in one of the world's leading
+              technology investment organizations.
+            </p>
+            <br />
+            <p class="item-body">
+              I hold a B.S. in Cybersecurity from WGU and am certified in CompTIA A+, Network+, Security+,
+              CySA+, and ISC² SSCP. My goal is to continue growing from enterprise IT support into a role
+              that blends infrastructure, security engineering, and automation.
             </p>
           </div>
         </article>
@@ -734,43 +514,47 @@
           <div class="section-header">
             <h2 class="section-title">Experience <span>Recent Roles</span></h2>
             <p class="section-subtitle">
-              Work that’s shaped how I think about secure, user-friendly systems.
+              Work that's shaped how I think about secure, user-friendly enterprise systems.
             </p>
           </div>
 
+          <!-- SoftBank / Saragossa — CURRENT -->
+          <div class="card">
+            <div class="card-header-row">
+              <h3 class="card-title">IT Service Desk Engineer · Supporting SoftBank</h3>
+              <span class="card-pill-new">Current</span>
+            </div>
+            <div class="item-meta">
+              Saragossa Consulting · On-site, Menlo Park, CA · April 2026 – Present
+            </div>
+            <p class="item-body">
+              Providing hands-on desktop and end-user support for SoftBank Group's Menlo Park office — a
+              lean, high-impact IT team supporting one of the world's leading technology investment and
+              AI-focused organizations.<br /><br />
+              • End-to-end troubleshooting and walk-up support for corporate employees<br />
+              • Managing onboarding and offboarding workflows (hardware provisioning, access, permissions)<br />
+              • Supporting macOS environments with tools including Jamf, Okta, Microsoft 365, and Zoom<br />
+              • Partnering directly with non-technical users to deliver clear, professional IT support
+            </p>
+          </div>
+
+          <!-- SFCJL Junior SysAdmin -->
           <div class="card">
             <div class="card-header-row">
               <h3 class="card-title">Junior System Administrator</h3>
-              <span class="card-pill">Current</span>
             </div>
             <div class="item-meta">
-              San Francisco Campus for Jewish Living · San Francisco, CA · July 2024 – Present
+              San Francisco Campus for Jewish Living · San Francisco, CA · July 2024 – March 2026
             </div>
             <p class="item-body">
-              • Orchestrated the configuration of Windows Autopilot and GPO policies across branches,
-              reducing post-deployment support time by 40%.<br />
-              • Rolled out and managed MDM policies for 200+ Apple and Android devices, tailoring
-              configurations to job roles and reducing security incidents by 40%.<br />
-              • Monitored health of O365, third-party SaaS, MDM, and SyxSense to ensure service availability.<br />
-              • Partnered with Systems Engineers and Service Desk leadership on infrastructure enhancements,
-              including offboarding automation and Microsoft PowerApps-based service requests.
-            </p>
-          </div>
-
-          <div class="card">
-            <div class="card-header-row">
-              <h3 class="card-title">Service Desk Business Analyst</h3>
-            </div>
-            <div class="item-meta">
-              San Francisco Campus for Jewish Living · Aug 2022 – July 2024
-            </div>
-            <p class="item-body">
-              • Implemented and configured an asset management system to replace legacy spreadsheets,
-              improving asset tracking and operational efficiency by 35%.<br />
-              • Resolved 1,000+ L2/L3 issues involving hardware, software, networking, malware, OS, and data
-              issues, increasing customer satisfaction by 20%.<br />
-              • Deployed and optimized Zoom conference room solutions to support hybrid collaboration.<br />
-              • Created documentation and processes to support consistent service desk operations.
+              • Led Security Awareness Training and Phishing Campaigns organization-wide<br />
+              • Administered Microsoft 365, SharePoint, Teams, and Google Workspace<br />
+              • Managed identity and access via Microsoft Entra ID (Azure AD)<br />
+              • Configured and enforced policies in Microsoft Intune and Windows Autopilot — reducing
+              post-deployment support time by 40%<br />
+              • Deployed and managed mobile devices using IBM MaaS360 MDM<br />
+              • Built and deployed an Asset Management app on Microsoft Power Apps for improved device tracking<br />
+              • Provided executive-level technical support for hardware, software, and network issues
             </p>
           </div>
         </article>
@@ -780,28 +564,19 @@
         <article class="fade-in">
           <div class="card">
             <div class="card-header-row">
-              <h3 class="card-title">Earlier Experience</h3>
+              <h3 class="card-title">Service Desk Business Analyst</h3>
             </div>
-            <ul class="item-list">
-              <li>
-                <div class="item-title">Desktop Support Intern · Five9</div>
-                <div class="item-meta">May 2022 – Aug 2022 · San Ramon, CA</div>
-                <div class="item-body">
-                  Supported 3,000+ employees globally with endpoint and account issues. Updated 2,000+ Lenovo
-                  laptop warranties and validated ~3,500 user records in the asset database. Assisted with
-                  Intune and JAMF policy configuration and wrote SOPs for inventory and intake processes.
-                </div>
-              </li>
-              <li>
-                <div class="item-title">IT Support · Truepill</div>
-                <div class="item-meta">Apr 2022 – May 2022 · Hayward, CA</div>
-                <div class="item-body">
-                  Configured 30+ enterprise printers and onboarded/offboarded 200+ employees using Google
-                  Workspace and Azure AD. Helped migrate users from JumpCloud to JAMF and Azure AD,
-                  improving user experience and management efficiency.
-                </div>
-              </li>
-            </ul>
+            <div class="item-meta">
+              San Francisco Campus for Jewish Living · Aug 2022 – July 2024
+            </div>
+            <p class="item-body">
+              • Resolved 825+ L2/L3 tickets involving hardware, software, networking, and access issues —
+              improving customer satisfaction by 93%<br />
+              • Managed onboarding and offboarding workflows for all staff<br />
+              • Deployed and optimized Zoom Room conference solutions for hybrid collaboration<br />
+              • Set up and configured Cisco gateway phone lines and patch panels<br />
+              • Provided C-suite level support for AV and collaboration technology
+            </p>
           </div>
         </article>
 
@@ -809,20 +584,21 @@
           <div class="card">
             <ul class="item-list">
               <li>
-                <div class="item-title">Automation Vehicle Operator / Operations Lead · Cruise Automation</div>
-                <div class="item-meta">Jan 2021 – Dec 2021 · San Francisco, CA</div>
+                <div class="item-title">Desktop Support Intern · Five9</div>
+                <div class="item-meta">May 2022 – Aug 2022 · San Ramon, CA</div>
                 <div class="item-body">
-                  Supported AV teams by troubleshooting vehicle issues and operating mapping vehicles,
-                  improving data collection efficiency and route coverage.
+                  Supported 2,000+ employees globally. Updated 2,000+ Lenovo laptop warranties, validated
+                  ~3,500 user records in asset database, and assisted with Intune and Jamf policy configuration.
+                  Wrote SOPs for inventory and device intake processes.
                 </div>
               </li>
               <li>
                 <div class="item-title">Application Security Intern · Kaiser Permanente</div>
                 <div class="item-meta">Jan 2020 – July 2020 · Pleasanton, CA</div>
                 <div class="item-body">
-                  Built a Selenium automation script in Java to check SSL/TLS protocol versions, achieving
-                  an 80% efficiency gain. Processed access requests via JIRA and created training materials
-                  for self-service security assessments.
+                  Built a Selenium automation script in Java to check SSL/TLS protocol versions via Qualys
+                  SSL Labs — achieving an 80% efficiency gain. Processed access requests via JIRA and created
+                  training materials for self-service security assessments.
                 </div>
               </li>
             </ul>
@@ -836,29 +612,35 @@
       <div class="section-header">
         <h2 class="section-title">Skills <span>Stack</span></h2>
         <p class="section-subtitle">
-          Tools and domains I’m comfortable owning in production environments.
+          Tools and domains I'm comfortable owning in production environments.
         </p>
       </div>
       <div class="grid-2 fade-in">
         <article class="card">
           <h3 class="card-title" style="margin-bottom:0.5rem;">Endpoint & Identity</h3>
           <div class="badge-row">
-            <span class="badge badge-highlight">MDM (Intune, JAMF, mobile devices)</span>
+            <span class="badge badge-highlight">Jamf (macOS MDM)</span>
+            <span class="badge badge-highlight">Okta</span>
+            <span class="badge">Microsoft Intune</span>
+            <span class="badge">IBM MaaS360</span>
             <span class="badge">Windows Autopilot</span>
             <span class="badge">Group Policy (GPO)</span>
+            <span class="badge">Microsoft Entra ID (Azure AD)</span>
             <span class="badge">Active Directory</span>
-            <span class="badge">Microsoft Entra (Azure AD)</span>
             <span class="badge">Microsoft 365 Admin</span>
-            <span class="badge">Patch management</span>
-            <span class="badge">Device configuration & hardening</span>
+            <span class="badge">Google Workspace Admin</span>
           </div>
 
-          <h3 class="card-title" style="margin:1.1rem 0 0.5rem;">Operating Systems & Networking</h3>
+          <h3 class="card-title" style="margin:1.1rem 0 0.5rem;">Desktop Support</h3>
           <div class="badge-row">
-            <span class="badge">Windows, macOS, Linux troubleshooting</span>
-            <span class="badge">Network & connectivity issues</span>
-            <span class="badge">Printer & peripheral configuration</span>
-            <span class="badge">IT asset management</span>
+            <span class="badge badge-highlight">macOS Support</span>
+            <span class="badge">Windows 10/11</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Hardware troubleshooting</span>
+            <span class="badge">Zoom / Zoom Rooms</span>
+            <span class="badge">Onboarding & offboarding</span>
+            <span class="badge">Asset management</span>
+            <span class="badge">Printer & peripheral config</span>
           </div>
         </article>
 
@@ -866,16 +648,18 @@
           <h3 class="card-title" style="margin-bottom:0.5rem;">Security & Automation</h3>
           <div class="badge-row">
             <span class="badge badge-highlight">PowerShell scripting</span>
-            <span class="badge">Security-focused configuration</span>
-            <span class="badge">Application & network security basics</span>
+            <span class="badge">Security Awareness Training</span>
+            <span class="badge">Phishing campaign management</span>
             <span class="badge">MDM policy enforcement</span>
-            <span class="badge">Vulnerability & protocol checks</span>
+            <span class="badge">TLS/SSL protocol checks</span>
+            <span class="badge">Vulnerability assessment basics</span>
+            <span class="badge">Selenium (Java)</span>
+            <span class="badge">Microsoft Power Apps</span>
             <span class="badge">Process documentation & SOPs</span>
-            <span class="badge">Selenium (Java automation)</span>
           </div>
           <p class="item-body" style="margin-top:1rem;">
-            I enjoy using automation and clear documentation to make repeatable, secure workflows that
-            scale beyond a single technician.
+            I use automation and clear documentation to build repeatable, secure workflows that scale
+            beyond a single technician.
           </p>
         </article>
       </div>
@@ -886,52 +670,69 @@
       <div class="section-header">
         <h2 class="section-title">Projects <span>Selected Work</span></h2>
         <p class="section-subtitle">
-          A few examples of where I’ve applied these skills to real environments.
+          A few examples of where I've applied these skills to real environments.
         </p>
       </div>
 
       <div class="projects-grid fade-in">
         <article class="project-card">
+          <h3 class="project-title">Enterprise Desktop Support · SoftBank</h3>
+          <div class="project-meta">Saragossa Consulting · On-site, Menlo Park · 2026–Present</div>
+          <p class="project-body">
+            Supporting a lean IT team at one of the world's leading AI and technology investment firms.
+            Day-to-day work includes walk-up support, hardware provisioning, onboarding/offboarding, and
+            managing macOS environments with Jamf, Okta, M365, and Zoom.
+          </p>
+          <div class="badge-row">
+            <span class="badge">Jamf</span>
+            <span class="badge">Okta</span>
+            <span class="badge">macOS</span>
+            <span class="badge">M365</span>
+          </div>
+        </article>
+
+        <article class="project-card">
           <h3 class="project-title">Windows Autopilot & GPO Deployment</h3>
-          <div class="project-meta">San Francisco Campus for Jewish Living · Production rollout</div>
+          <div class="project-meta">SF Campus for Jewish Living · Production rollout</div>
           <p class="project-body">
             Orchestrated configuration of Windows Autopilot and GPO across multiple branches, standardizing
-            device provisioning and hardening. The rollout reduced post-deployment support time by 40% and
-            gave users a more predictable onboarding experience.
+            device provisioning and hardening. Reduced post-deployment support time by 40% and gave users a
+            more predictable onboarding experience.
           </p>
           <div class="badge-row">
             <span class="badge">Autopilot</span>
             <span class="badge">GPO</span>
-            <span class="badge">Endpoint configuration</span>
+            <span class="badge">Intune</span>
           </div>
         </article>
 
         <article class="project-card">
           <h3 class="project-title">Mobile Device Management for iOS & Android</h3>
-          <div class="project-meta">MDM · Security-minded rollout</div>
+          <div class="project-meta">MDM · Security-minded rollout · 200+ devices</div>
           <p class="project-body">
-            Rolled out MDM policies for 200+ Apple and Android devices with role-based configurations. This
-            reduced security incidents by 40% and made device management more consistent across the
-            organization.
+            Rolled out MDM policies for 200+ Apple and Android devices with role-based configurations.
+            Reduced security incidents by 40% and made device management consistent across the organization
+            using IBM MaaS360.
           </p>
           <div class="badge-row">
-            <span class="badge">MDM</span>
+            <span class="badge">MaaS360</span>
             <span class="badge">iOS & Android</span>
             <span class="badge">Policy enforcement</span>
           </div>
         </article>
 
         <article class="project-card">
-          <h3 class="project-title">Asset Management System Replacement</h3>
-          <div class="project-meta">Service Desk Business Analyst · Process improvement</div>
+          <h3 class="project-title">Power Apps Asset Management System</h3>
+          <div class="project-meta">SF Campus for Jewish Living · Process improvement</div>
           <p class="project-body">
-            Implemented a modern asset management platform to replace aging Excel-based tracking. Defined
-            standards for intake, warranty tracking, and lifecycle updates, resulting in a 35% increase in
-            operational efficiency and cleaner data for decision-making.
+            Built and deployed a custom asset management application on Microsoft Power Apps to replace
+            legacy spreadsheet tracking. Improved visibility into device lifecycle, warranty status, and
+            inventory — increasing operational efficiency by 35%.
           </p>
           <div class="badge-row">
-            <span class="badge">Asset management</span>
-            <span class="badge">Process design</span>
+            <span class="badge">Power Apps</span>
+            <span class="badge">M365</span>
+            <span class="badge">Asset tracking</span>
           </div>
         </article>
 
@@ -940,7 +741,7 @@
           <div class="project-meta">Kaiser Permanente · Application Security Intern</div>
           <p class="project-body">
             Created a Selenium automation script in Java to check website protocol versions based on Qualys
-            SSL Labs results. The tool delivered an 80% efficiency improvement in verifying TLS configurations
+            SSL Labs results — delivering an 80% efficiency improvement in verifying TLS configurations
             across internal applications.
           </p>
           <div class="badge-row">
@@ -951,18 +752,18 @@
         </article>
 
         <article class="project-card">
-          <h3 class="project-title">Homelab: Proxmox, TrueNAS, Plex & AdGuard</h3>
+          <h3 class="project-title">Homelab: Proxmox, TrueNAS, AdGuard & Kali</h3>
           <div class="project-meta">Self-hosted lab · Ongoing</div>
           <p class="project-body">
-            Built a homelab environment to experiment with virtualization, storage, media, and DNS-level
-            filtering. Proxmox hosts VMs and containers, TrueNAS manages storage, Plex provides streaming for
-            family media, and AdGuard offers DNS filtering and privacy enhancements.
+            Built a homelab environment for virtualization, storage, DNS filtering, and security practice.
+            Proxmox hosts VMs and containers, TrueNAS manages storage, AdGuard Home handles DNS-level
+            filtering, and Kali Linux is used for security skill development.
           </p>
           <div class="badge-row">
             <span class="badge">Proxmox</span>
             <span class="badge">TrueNAS</span>
-            <span class="badge">Plex</span>
-            <span class="badge">AdGuard Home</span>
+            <span class="badge">AdGuard</span>
+            <span class="badge">Kali Linux</span>
           </div>
         </article>
       </div>
@@ -984,16 +785,20 @@
           </div>
           <ul class="item-list">
             <li>
-              <div class="item-title">B.S. Cybersecurity & Information Security (in progress)</div>
-              <div class="item-meta">Western Governors University · ~ 2025</div>
+              <div class="item-title">B.S. Cybersecurity & Information Assurance</div>
+              <div class="item-meta">Western Governors University · Graduated 2024</div>
               <div class="item-body">
-                Competency-based program with a focus on security fundamentals, network and application
-                security, and industry-aligned certifications.
+                Competency-based program covering security fundamentals, network and application security,
+                risk management, and industry-aligned certifications. Completed.
               </div>
             </li>
             <li>
               <div class="item-title">A.S. Information Technology</div>
-              <div class="item-meta">Las Positas College · May 2023</div>
+              <div class="item-meta">Las Positas College</div>
+            </li>
+            <li>
+              <div class="item-title">Cybersecurity Trainee</div>
+              <div class="item-meta">Year Up · Early career program</div>
             </li>
           </ul>
         </article>
@@ -1005,11 +810,13 @@
           <ul class="item-list">
             <li>
               <div class="item-body">
-                • CompTIA A+<br />
-                • CompTIA Network+<br />
-                • CompTIA Security+<br />
-                • CompTIA CySA+<br />
-                • (ISC)² SSCP
+                • CompTIA A+ <span style="color: #4ade80; font-size:0.75rem;">✓ Active</span><br />
+                • CompTIA Network+ <span style="color: #4ade80; font-size:0.75rem;">✓ Active</span><br />
+                • CompTIA Security+ <span style="color: #4ade80; font-size:0.75rem;">✓ Active</span><br />
+                • CompTIA CySA+ <span style="color: #4ade80; font-size:0.75rem;">✓ Active</span><br />
+                • CompTIA Pentest+ <span style="color: #4ade80; font-size:0.75rem;">✓ Active</span><br />
+                • (ISC)² SSCP <span style="color: #4ade80; font-size:0.75rem;">✓ Active</span><br />
+                • CompTIA CSIS Stackable Certification <span style="color: #4ade80; font-size:0.75rem;">✓ Active</span>
               </div>
             </li>
           </ul>
@@ -1020,9 +827,9 @@
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-header">
-        <h2 class="section-title">Contact <span>Let’s Talk</span></h2>
+        <h2 class="section-title">Contact <span>Let's Talk</span></h2>
         <p class="section-subtitle">
-          Open to roles in system administration, endpoint management, and security-focused IT.
+          Open to conversations about system administration, endpoint security, and cybersecurity roles.
         </p>
       </div>
 
@@ -1030,7 +837,7 @@
         <article class="card">
           <h3 class="card-title" style="margin-bottom:0.5rem;">Get in touch</h3>
           <p class="item-body" style="margin-bottom:1rem;">
-            If you’d like to talk about an opportunity, a project, or just compare notes on MDM and
+            If you'd like to talk about an opportunity, a project, or just compare notes on MDM and
             homelab setups, feel free to reach out.
           </p>
           <div class="contact-links">
@@ -1044,17 +851,13 @@
             </div>
             <div class="contact-line">
               <strong>GitHub</strong><br />
-              <a href="https://github.com/rborlongan" target="_blank">
-                github.com/rborlongan
-              </a>
+              <a href="https://github.com/rborlongan" target="_blank">github.com/rborlongan</a>
             </div>
-            <!-- Optional: add LinkedIn once you’re ready -->
             <div class="contact-line">
               <strong>LinkedIn</strong><br />
-              <a href="https://www.linkedin.com/in/raphael-landre-borlongan/" target="_blank">
-                https://www.linkedin.com/in/raphael-landre-borlongan/
+              <a href="https://www.linkedin.com/in/raphaellandre-borlongan" target="_blank">
+                linkedin.com/in/raphaellandre-borlongan
               </a>
-              <span>.</span>
             </div>
           </div>
         </article>
@@ -1065,7 +868,8 @@
             • Security-minded decisions, even on small tasks.<br />
             • Empathy for end-users and clear communication with non-technical teams.<br />
             • A bias toward documenting, automating, and improving processes over time.<br />
-            • A growth mindset as I continue deepening my cybersecurity expertise.
+            • Professional composure in high-visibility, executive-facing environments.<br />
+            • A growth mindset as I deepen my path into cybersecurity.
           </p>
         </article>
       </div>
@@ -1077,10 +881,8 @@
   </div>
 
   <script>
-    // Year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Soft mouse glow on cards
     document.querySelectorAll(".card").forEach(card => {
       card.addEventListener("pointermove", (e) => {
         const rect = card.getBoundingClientRect();

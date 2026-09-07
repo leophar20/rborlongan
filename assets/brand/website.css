@@ -1,5 +1,5 @@
-@font-face{font-family:Inter;src:url('Inter.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
-@font-face{font-family:'JetBrains Mono';src:url('JetBrainsMono.ttf') format('truetype');font-weight:100 800;font-style:normal;font-display:swap}
+@font-face{font-family:Inter;src:url('Inter.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url('JetBrainsMono.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 /* Brand kit: charcoal, muted blue, warm off-white; original logo paths and fonts. */
 @media screen{
 :root{color-scheme:dark;--navy:#14181d;--navy2:#1d242c;--lime:#87a9cf;--white:#14181d;--paper:#1d242c;--text:#f2f0eb;--muted:#adb6c1;--line:#38434f}

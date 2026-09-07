@@ -28,6 +28,12 @@
 @media(max-width:950px){.qualifications{grid-template-columns:1fr}.credentials{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.credentials{grid-template-columns:1fr}}
 @media print{.cert-logo{display:none}.credentials{display:block}.credentials a{display:inline;min-height:0;padding:3px;background:none}}
+
+/* Content stays visible unless JavaScript opts an off-screen item into reveal. */
+.scroll-reveal{transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.scroll-reveal.is-pending{opacity:0;transform:translateY(22px)}
+@media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-pending{opacity:1;transform:none;transition:none}}
+@media print{.scroll-reveal,.scroll-reveal.is-pending{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -60,7 +66,7 @@
 </a>
 </div>
 <p class="hero-foot">Currently supporting SoftBank through Saragossa · Menlo Park</p>
-<p class="print-only">rborlongan20@outlook.com | https://www.linkedin.com/in/raphael-landre-borlongan/</p>
+<p class="print-only">raphael@rborlongan.com | https://www.linkedin.com/in/raphael-landre-borlongan/</p>
 </div>
 <figure class="portrait-card">
 <img src="portrait-raphael.jpg" alt="Raphael Landre Borlongan" width="320" height="300">
@@ -361,10 +367,10 @@
 <span class="kicker">Let’s connect</span>
 <h2 id="contact-title">Make technology work better.</h2>
 <p>Interested in enterprise IT, endpoint management, and systems administration opportunities with a security focus.</p>
-<a class="email" href="mailto:rborlongan20@outlook.com">rborlongan20@outlook.com</a>
+<a class="email" href="mailto:raphael@rborlongan.com">raphael@rborlongan.com</a>
 </div>
 <div>
-<a class="button" href="mailto:rborlongan20@outlook.com">Start a conversation <span aria-hidden="true">↗</span>
+<a class="button" href="mailto:raphael@rborlongan.com">Start a conversation <span aria-hidden="true">↗</span>
 </a>
 <div class="contact-links">
 <a href="https://www.linkedin.com/in/raphael-landre-borlongan/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
@@ -381,6 +387,38 @@
 <a href="#main">Back to top ↑</a>
 </footer>
 </div>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();
+(() => {
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motion.matches || !('IntersectionObserver' in window)) return;
+  const items = [...document.querySelectorAll('.section-head, .fit, .case, .job, .skills article, .lab, .qualifications, .contact-inner')];
+  const reveal = element => element.classList.remove('is-pending');
+  let observer;
+  try {
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          reveal(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+    items.forEach(element => {
+      if (element.getBoundingClientRect().top < window.innerHeight) return;
+      observer.observe(element);
+      element.classList.add('scroll-reveal', 'is-pending');
+    });
+    const showAll = () => { items.forEach(reveal); observer.disconnect(); };
+    motion.addEventListener('change', event => { if (event.matches) showAll(); });
+    document.addEventListener('focusin', event => {
+      const element = event.target.closest('.is-pending');
+      if (element) { reveal(element); observer.unobserve(element); }
+    });
+    window.addEventListener('beforeprint', showAll);
+  } catch (_) {
+    items.forEach(reveal);
+    if (observer) observer.disconnect();
+  }
+})();</script>
 </body>
 </html>

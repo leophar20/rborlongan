@@ -56,6 +56,23 @@
 @media(max-width:680px){.story-enhanced .project-story{display:block}.story-enhanced .story-stage{top:0;z-index:5;background:var(--paper);padding:8px 0}.story-screen{min-height:145px;padding:14px 18px}.story-stage-header{font-size:11px}.story-panel{inset:42px 18px 10px}.story-panel h3{font-size:23px;max-width:none;margin:4px 0}.story-theme{font-size:11px;margin:0}.story-diagram,.story-caption{display:none}.story-nav{padding-top:6px;gap:5px}.story-nav a{padding:6px;font-size:11px}.story-enhanced .story-step{min-height:68svh;padding:28px 0 28px 18px;scroll-margin-top:215px}.story-steps{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.story-enhanced .project-story{display:block}.story-enhanced .story-stage{display:none}.story-enhanced .story-step{min-height:0;padding:24px;border:1px solid var(--line);background:white;margin-bottom:20px}.story-panel,.story-meter span,.story-step{transition:none}}
 @media print{.story-enhanced .project-story{display:block}.story-enhanced .story-stage{display:none}.story-enhanced .story-step{min-height:0;padding:12px;border:0}.story-steps{display:block}}
+
+/* Employer grouping keeps each role and its dates distinct. */
+.job.company-group{display:block;padding:32px 0}
+.company-heading{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.company-logo{width:64px;height:64px;object-fit:contain;border:1px solid var(--line);border-radius:10px;background:#fff;flex-shrink:0}
+.company-heading h3{font-size:21px;margin:0 0 5px;line-height:1.3}.company-meta{font-size:14px;color:var(--muted);margin:0}
+.career-role{margin-left:82px}.career-role h4{font-size:18px;font-weight:600;line-height:1.4;margin:0 0 5px;letter-spacing:-.02em}
+.role-dates{font:13px/1.7 Consolas,monospace;color:var(--muted);margin:0 0 14px}
+.career-summary{font-size:14px;color:#375822;background:#f1f6e9;padding:12px 16px;border-radius:4px;margin:0 0 26px 82px}
+.career-timeline{margin-left:31px;border-left:2px solid var(--line);padding-left:49px}
+.career-timeline .career-role{margin:0;position:relative;padding-bottom:30px}
+.career-timeline .career-role:last-child{padding-bottom:0}
+.career-timeline .career-role:before{content:"";position:absolute;left:-56px;top:7px;width:12px;height:12px;background:var(--white);border:2px solid #72815f;border-radius:50%}
+.career-timeline .career-role:first-child:before{background:var(--lime);border-color:#557d2b}
+.career-promotion{font-size:12px;color:#426126;font-weight:600;margin:0 0 9px}
+@media(max-width:680px){.company-heading{gap:14px}.company-logo{width:52px;height:52px}.company-heading h3{font-size:19px}.career-role{margin-left:0}.career-summary{margin-left:0}.career-timeline{margin-left:8px;padding-left:24px}.career-timeline .career-role:before{left:-31px}.company-meta{font-size:13px}}
+@media print{.company-logo{display:none}.career-role,.career-summary,.career-timeline{margin-left:0}.career-timeline{padding-left:18px}.career-timeline .career-role:before{left:-25px}.job.company-group{break-inside:auto}.career-role{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -246,67 +263,26 @@
 </div>
 <p>A path through application security, enterprise support, and systems administration.</p>
 </div>
-<article class="job">
-<div class="job-date">April 2026 - Present</div>
-<div>
-<h3>IT Service Desk Engineer</h3>
-<p class="employer">Saragossa Consulting | Supporting SoftBank</p>
-<p class="location">Menlo Park, CA</p>
-<ul>
+<article class="job company-group"><div class="company-heading"><img class="company-logo" src="assets/employers/saragossa.jpg" alt="Saragossa logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>Saragossa</h3><p class="company-meta">Supporting SoftBank · Menlo Park, CA</p></div></div><div class="career-role"><h4>IT Service Desk Engineer</h4><p class="role-dates">April 2026 – Present</p><ul>
 <li>Support employees and executives with desktop troubleshooting, hardware provisioning, and day-to-day IT operations in SoftBank&#x27;s Menlo Park office.</li>
 <li>Coordinate onboarding and offboarding across devices and access; support macOS environments using Jamf, Okta, Microsoft 365, and Zoom.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">July 2024 - March 2026</div>
-<div>
-<h3>Junior System Administrator</h3>
-<p class="employer">San Francisco Campus for Jewish Living</p>
-<p class="location">San Francisco, CA</p>
-<ul>
+</ul></div></article>
+<article class="job company-group company-progression"><div class="company-heading"><img class="company-logo" src="assets/employers/sfcjl.jpg" alt="San Francisco Campus for Jewish Living logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>San Francisco Campus for Jewish Living</h3><p class="company-meta">August 2022 – March 2026 · San Francisco, CA</p></div></div><p class="career-summary">Career progression <span aria-hidden="true">↗</span> Service Desk Business Analyst → Junior System Administrator</p><div class="career-timeline"><div class="career-role"><p class="career-promotion">Advanced to system administration · July 2024</p><h4>Junior System Administrator</h4><p class="role-dates">July 2024 – March 2026</p><ul>
 <li>Configured Microsoft Intune, Windows Autopilot, and Group Policy to standardize device provisioning and policy enforcement across branches.</li>
 <li>Administered Microsoft 365, SharePoint, Teams, Google Workspace, and Microsoft Entra ID (Azure AD); managed mobile devices with IBM MaaS360.</li>
 <li>Built a Microsoft Power Apps asset management application to replace spreadsheet tracking and improve visibility into device lifecycle and warranty status.</li>
 <li>Led security awareness training and phishing campaigns, alongside executive technical support.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">August 2022 - July 2024</div>
-<div>
-<h3>Service Desk Business Analyst</h3>
-<p class="employer">San Francisco Campus for Jewish Living</p>
-<p class="location">San Francisco, CA</p>
-<ul>
+</ul></div><div class="career-role"><h4>Service Desk Business Analyst</h4><p class="role-dates">August 2022 – July 2024</p><ul>
 <li>Resolved escalated hardware, software, networking, and access issues; managed staff onboarding and offboarding workflows.</li>
 <li>Deployed Zoom Room conference solutions and supported executive audiovisual technology; configured Cisco gateway phone lines and patch panels.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">May 2022 - August 2022</div>
-<div>
-<h3>Desktop Support Intern</h3>
-<p class="employer">Five9</p>
-<p class="location">San Ramon, CA</p>
-<ul>
+</ul></div></div></article>
+<article class="job company-group"><div class="company-heading"><img class="company-logo" src="assets/employers/five9.jpg" alt="Five9 logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>Five9</h3><p class="company-meta">San Ramon, CA</p></div></div><div class="career-role"><h4>Desktop Support Intern</h4><p class="role-dates">May 2022 – August 2022</p><ul>
 <li>Maintained laptop warranty and asset records, assisted with Intune and Jamf policy configuration, and wrote standard operating procedures for inventory and device intake.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">January 2020 - July 2020</div>
-<div>
-<h3>Application Security Intern</h3>
-<p class="employer">Kaiser Permanente</p>
-<p class="location">Pleasanton, CA</p>
-<ul>
+</ul></div></article>
+<article class="job company-group"><div class="company-heading"><img class="company-logo" src="assets/employers/kaiser.jpg" alt="Kaiser Permanente logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>Kaiser Permanente</h3><p class="company-meta">Pleasanton, CA</p></div></div><div class="career-role"><h4>Application Security Intern</h4><p class="role-dates">January 2020 – July 2020</p><ul>
 <li>Created a Selenium automation script in Java to check TLS/SSL protocol versions using Qualys SSL Labs results.</li>
 <li>Processed access requests through Jira and developed training materials for self-service security assessments.</li>
-</ul>
-</div>
-</article>
+</ul></div></article>
 </section>
 <section class="section technical" id="skills" aria-labelledby="skills-title">
 <div class="container">

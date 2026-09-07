@@ -33,3 +33,10 @@ h1{font-size:clamp(40px,4.8vw,64px);line-height:1.1;letter-spacing:-.035em;margi
 @media(prefers-reduced-motion:reduce){.story-enhanced .story-step{background:var(--navy2)}*,*:before,*:after{transition:none!important}}
 }
 @media print{.brand img,.footer-brand img{display:none}.hero-name{font-size:24pt;font-weight:bold;margin:0}.hero h1{font-size:14pt}.eyebrow{display:block;color:black}a{color:black}}
+
+
+/* Project-specific vector workflows stay visible without motion or JavaScript. */
+.project-art{margin:0 0 24px}.project-art img,.project-stage-art img{display:block;width:100%;height:auto;border-radius:12px}.project-art figcaption{font-size:12px;color:var(--muted);padding-top:10px}
+@media screen and (min-width:681px){.story-enhanced .project-art{display:none}.story-screen{min-height:620px}.project-stage-art{max-width:440px;margin:0 auto}.story-panel h3{margin-bottom:20px}.story-caption{margin-top:12px}}
+@media screen and (max-width:680px){.project-stage-art{display:none}.project-art{margin-bottom:24px}}
+@media print{.project-art{display:none}}

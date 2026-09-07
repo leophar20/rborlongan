@@ -40,3 +40,18 @@ h1{font-size:clamp(40px,4.8vw,64px);line-height:1.1;letter-spacing:-.035em;margi
 @media screen and (min-width:681px){.story-enhanced .project-art{display:none}.story-screen{min-height:620px}.project-stage-art{max-width:440px;margin:0 auto}.story-panel h3{margin-bottom:20px}.story-caption{margin-top:12px}}
 @media screen and (max-width:680px){.project-stage-art{display:none}.project-art{margin-bottom:24px}}
 @media print{.project-art{display:none}}
+
+/* Shared grid cell sizes the panel to its tallest chapter instead of clipping it. */
+@media screen and (min-width:681px){
+.story-screen{display:grid;grid-template-columns:minmax(0,1fr);min-height:0;gap:24px;padding:28px 28px 32px}
+.story-stage-header{grid-area:1/1;gap:16px}
+.story-panel{grid-area:2/1;position:relative;inset:auto;min-width:0;visibility:hidden}
+.story-panel.is-active{visibility:visible}
+.project-stage-art{width:100%;max-width:440px}
+.project-stage-art img{max-width:100%;height:auto}
+.story-enhanced .project-art{display:none}
+}
+@media screen and (max-width:680px){
+.project-art{display:block;min-width:0}
+.project-art img{max-width:100%;height:auto}
+}

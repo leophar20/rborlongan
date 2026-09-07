@@ -34,6 +34,45 @@
 .scroll-reveal.is-pending{opacity:0;transform:translateY(22px)}
 @media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-pending{opacity:1;transform:none;transition:none}}
 @media print{.scroll-reveal,.scroll-reveal.is-pending{opacity:1;transform:none;transition:none}}
+
+/* Progressive enhancement: the full project text remains in normal document order. */
+.project-story{position:relative}.story-stage{display:none}.story-steps{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.story-step{scroll-margin-top:32px}
+.story-enhanced .project-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.story-enhanced .story-stage{display:block;position:sticky;top:32px}
+.story-screen{position:relative;min-height:530px;padding:28px;background:var(--navy);color:white;border-radius:6px;overflow:hidden}
+.story-stage-header{display:flex;justify-content:space-between;font:12px Consolas,monospace;text-transform:uppercase;letter-spacing:.08em;color:#bdc9d8}
+.story-panel{position:absolute;inset:72px 28px 35px;opacity:0;transform:translateY(16px);transition:opacity .35s ease,transform .45s ease;pointer-events:none}
+.story-panel.is-active{opacity:1;transform:none}.story-theme{color:var(--lime);font:13px Consolas,monospace;text-transform:uppercase;letter-spacing:.12em;margin:0 0 14px}
+.story-panel h3{font-size:clamp(24px,3vw,36px);line-height:1.1;max-width:340px;margin:0 0 24px}.story-diagram{display:grid;justify-items:center}
+.story-node{border:1px solid #607184;border-radius:4px;padding:12px 18px;width:100%;text-align:center;font-size:15px;background:var(--navy2)}
+.story-node:last-child{color:var(--lime);border-color:#7c9850}.story-connector{color:#b9c9a4;line-height:1.5}.story-caption{font-size:12px;color:#bdc9d8;margin:18px 0 0}
+.story-meter{position:absolute;left:0;right:0;bottom:0;height:4px;background:#35404d}.story-meter span{display:block;height:100%;background:var(--lime);transform-origin:left;transform:scaleX(var(--story-progress,0));transition:transform .12s linear}
+.story-nav{display:flex;flex-wrap:wrap;gap:8px;padding-top:15px}.story-nav a{font-size:12px;padding:8px 10px;border:1px solid var(--line);border-radius:3px;text-decoration:none}
+.story-nav a[aria-current="step"]{background:var(--navy);color:white;border-color:var(--navy)}
+.story-enhanced .story-steps{display:block}.story-enhanced .story-step{min-height:78vh;min-height:78svh;display:flex;flex-direction:column;justify-content:center;border:0;border-left:2px solid var(--line);border-radius:0;background:transparent;padding:38px 0 38px 30px;transition:border-color .3s}
+.story-enhanced .story-step.is-current{border-left-color:#598129}.story-enhanced .story-step .case-tools{margin-top:24px}
+@media(max-width:950px){.story-enhanced .project-story{gap:25px}.story-screen{padding:22px}.story-panel{left:22px;right:22px}.story-enhanced .story-step{padding-left:20px}}
+@media(max-width:680px){.story-enhanced .project-story{display:block}.story-enhanced .story-stage{top:0;z-index:5;background:var(--paper);padding:8px 0}.story-screen{min-height:145px;padding:14px 18px}.story-stage-header{font-size:11px}.story-panel{inset:42px 18px 10px}.story-panel h3{font-size:23px;max-width:none;margin:4px 0}.story-theme{font-size:11px;margin:0}.story-diagram,.story-caption{display:none}.story-nav{padding-top:6px;gap:5px}.story-nav a{padding:6px;font-size:11px}.story-enhanced .story-step{min-height:68svh;padding:28px 0 28px 18px;scroll-margin-top:215px}.story-steps{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.story-enhanced .project-story{display:block}.story-enhanced .story-stage{display:none}.story-enhanced .story-step{min-height:0;padding:24px;border:1px solid var(--line);background:white;margin-bottom:20px}.story-panel,.story-meter span,.story-step{transition:none}}
+@media print{.story-enhanced .project-story{display:block}.story-enhanced .story-stage{display:none}.story-enhanced .story-step{min-height:0;padding:12px;border:0}.story-steps{display:block}}
+
+/* Employer grouping keeps each role and its dates distinct. */
+.job.company-group{display:block;padding:32px 0}
+.company-heading{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.company-logo{width:64px;height:64px;object-fit:contain;border:1px solid var(--line);border-radius:10px;background:#fff;flex-shrink:0}
+.company-heading h3{font-size:21px;margin:0 0 5px;line-height:1.3}.company-meta{font-size:14px;color:var(--muted);margin:0}
+.career-role{margin-left:82px}.career-role h4{font-size:18px;font-weight:600;line-height:1.4;margin:0 0 5px;letter-spacing:-.02em}
+.role-dates{font:13px/1.7 Consolas,monospace;color:var(--muted);margin:0 0 14px}
+.career-summary{font-size:14px;color:#375822;background:#f1f6e9;padding:12px 16px;border-radius:4px;margin:0 0 26px 82px}
+.career-timeline{margin-left:31px;border-left:2px solid var(--line);padding-left:49px}
+.career-timeline .career-role{margin:0;position:relative;padding-bottom:30px}
+.career-timeline .career-role:last-child{padding-bottom:0}
+.career-timeline .career-role:before{content:"";position:absolute;left:-56px;top:7px;width:12px;height:12px;background:var(--white);border:2px solid #72815f;border-radius:50%}
+.career-timeline .career-role:first-child:before{background:var(--lime);border-color:#557d2b}
+.career-promotion{font-size:12px;color:#426126;font-weight:600;margin:0 0 9px}
+@media(max-width:680px){.company-heading{gap:14px}.company-logo{width:52px;height:52px}.company-heading h3{font-size:19px}.career-role{margin-left:0}.career-summary{margin-left:0}.career-timeline{margin-left:8px;padding-left:24px}.career-timeline .career-role:before{left:-31px}.company-meta{font-size:13px}}
+@media print{.company-logo{display:none}.career-role,.career-summary,.career-timeline{margin-left:0}.career-timeline{padding-left:18px}.career-timeline .career-role:before{left:-25px}.job.company-group{break-inside:auto}.career-role{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -133,8 +172,19 @@
 </div>
 <p>Practical improvements to device management, internal workflows, and security assessments.</p>
 </div>
-<div class="case-grid">
-<article class="case">
+<div class="project-story" id="project-story">
+<aside class="story-stage" aria-label="Project chapters">
+<div class="story-screen" aria-hidden="true">
+<div class="story-stage-header"><span>Selected work</span><span class="story-count">01 / 04</span></div>
+<div class="story-panel is-active" data-panel="0"><p class="story-theme">Provision</p><h3>Consistent from day one.</h3><div class="story-diagram"><div class="story-node">Windows Autopilot</div><span class="story-connector">↓</span><div class="story-node">Intune + Group Policy</div><span class="story-connector">↓</span><div class="story-node">Repeatable setup</div></div><p class="story-caption">Device → configuration → ready to work</p></div>
+<div class="story-panel" data-panel="1"><p class="story-theme">Track</p><h3>A clearer view of every asset.</h3><div class="story-diagram"><div class="story-node">Device records</div><span class="story-connector">↓</span><div class="story-node">Power Apps</div><span class="story-connector">↓</span><div class="story-node">Lifecycle visibility</div></div><p class="story-caption">Inventory → warranty → lifecycle</p></div>
+<div class="story-panel" data-panel="2"><p class="story-theme">Automate</p><h3>Turn repetition into automation.</h3><div class="story-diagram"><div class="story-node">TLS / SSL</div><span class="story-connector">↓</span><div class="story-node">Java + Selenium</div><span class="story-connector">↓</span><div class="story-node">Repeatable checks</div></div><p class="story-caption">Website → protocol check → assessment</p></div>
+<div class="story-panel" data-panel="3"><p class="story-theme">Protect</p><h3>Policies that follow the role.</h3><div class="story-diagram"><div class="story-node">iOS + Android</div><span class="story-connector">↓</span><div class="story-node">IBM MaaS360</div><span class="story-connector">↓</span><div class="story-node">Consistent policies</div></div><p class="story-caption">Role → policy → managed device</p></div>
+<div class="story-meter"><span></span></div>
+</div>
+<nav class="story-nav" aria-label="Jump to project"><a href="#project-1">01 Provision</a><a href="#project-2">02 Track</a><a href="#project-3">03 Automate</a><a href="#project-4">04 Protect</a></nav>
+</aside>
+<div class="story-steps"><article class="case story-step" id="project-1" data-step="0">
 <div class="case-top">
 <span>01 / Endpoint management</span>
 <span aria-hidden="true">↗</span>
@@ -151,7 +201,7 @@
 </dl>
 <p class="case-tools">Autopilot / Intune / GPO</p>
 </article>
-<article class="case">
+<article class="case story-step" id="project-2" data-step="1">
 <div class="case-top">
 <span>02 / Internal tools</span>
 <span aria-hidden="true">↗</span>
@@ -168,7 +218,7 @@
 </dl>
 <p class="case-tools">Power Apps / Microsoft 365</p>
 </article>
-<article class="case">
+<article class="case story-step" id="project-3" data-step="2">
 <div class="case-top">
 <span>03 / Security automation</span>
 <span aria-hidden="true">↗</span>
@@ -185,7 +235,7 @@
 </dl>
 <p class="case-tools">Java / Selenium / TLS / SSL</p>
 </article>
-<article class="case">
+<article class="case story-step" id="project-4" data-step="3">
 <div class="case-top">
 <span>04 / Mobile security</span>
 <span aria-hidden="true">↗</span>
@@ -201,7 +251,7 @@
 <dd>Established consistent device management and policy enforcement.</dd>
 </dl>
 <p class="case-tools">MaaS360 / iOS / Android</p>
-</article>
+</article></div>
 </div>
 </div>
 </section>
@@ -213,67 +263,26 @@
 </div>
 <p>A path through application security, enterprise support, and systems administration.</p>
 </div>
-<article class="job">
-<div class="job-date">April 2026 - Present</div>
-<div>
-<h3>IT Service Desk Engineer</h3>
-<p class="employer">Saragossa Consulting | Supporting SoftBank</p>
-<p class="location">Menlo Park, CA</p>
-<ul>
+<article class="job company-group"><div class="company-heading"><img class="company-logo" src="assets/employers/saragossa.jpg" alt="Saragossa logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>Saragossa</h3><p class="company-meta">Supporting SoftBank · Menlo Park, CA</p></div></div><div class="career-role"><h4>IT Service Desk Engineer</h4><p class="role-dates">April 2026 – Present</p><ul>
 <li>Support employees and executives with desktop troubleshooting, hardware provisioning, and day-to-day IT operations in SoftBank&#x27;s Menlo Park office.</li>
 <li>Coordinate onboarding and offboarding across devices and access; support macOS environments using Jamf, Okta, Microsoft 365, and Zoom.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">July 2024 - March 2026</div>
-<div>
-<h3>Junior System Administrator</h3>
-<p class="employer">San Francisco Campus for Jewish Living</p>
-<p class="location">San Francisco, CA</p>
-<ul>
+</ul></div></article>
+<article class="job company-group company-progression"><div class="company-heading"><img class="company-logo" src="assets/employers/sfcjl.jpg" alt="San Francisco Campus for Jewish Living logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>San Francisco Campus for Jewish Living</h3><p class="company-meta">August 2022 – March 2026 · San Francisco, CA</p></div></div><p class="career-summary">Career progression <span aria-hidden="true">↗</span> Service Desk Business Analyst → Junior System Administrator</p><div class="career-timeline"><div class="career-role"><p class="career-promotion">Advanced to system administration · July 2024</p><h4>Junior System Administrator</h4><p class="role-dates">July 2024 – March 2026</p><ul>
 <li>Configured Microsoft Intune, Windows Autopilot, and Group Policy to standardize device provisioning and policy enforcement across branches.</li>
 <li>Administered Microsoft 365, SharePoint, Teams, Google Workspace, and Microsoft Entra ID (Azure AD); managed mobile devices with IBM MaaS360.</li>
 <li>Built a Microsoft Power Apps asset management application to replace spreadsheet tracking and improve visibility into device lifecycle and warranty status.</li>
 <li>Led security awareness training and phishing campaigns, alongside executive technical support.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">August 2022 - July 2024</div>
-<div>
-<h3>Service Desk Business Analyst</h3>
-<p class="employer">San Francisco Campus for Jewish Living</p>
-<p class="location">San Francisco, CA</p>
-<ul>
+</ul></div><div class="career-role"><h4>Service Desk Business Analyst</h4><p class="role-dates">August 2022 – July 2024</p><ul>
 <li>Resolved escalated hardware, software, networking, and access issues; managed staff onboarding and offboarding workflows.</li>
 <li>Deployed Zoom Room conference solutions and supported executive audiovisual technology; configured Cisco gateway phone lines and patch panels.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">May 2022 - August 2022</div>
-<div>
-<h3>Desktop Support Intern</h3>
-<p class="employer">Five9</p>
-<p class="location">San Ramon, CA</p>
-<ul>
+</ul></div></div></article>
+<article class="job company-group"><div class="company-heading"><img class="company-logo" src="assets/employers/five9.jpg" alt="Five9 logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>Five9</h3><p class="company-meta">San Ramon, CA</p></div></div><div class="career-role"><h4>Desktop Support Intern</h4><p class="role-dates">May 2022 – August 2022</p><ul>
 <li>Maintained laptop warranty and asset records, assisted with Intune and Jamf policy configuration, and wrote standard operating procedures for inventory and device intake.</li>
-</ul>
-</div>
-</article>
-<article class="job">
-<div class="job-date">January 2020 - July 2020</div>
-<div>
-<h3>Application Security Intern</h3>
-<p class="employer">Kaiser Permanente</p>
-<p class="location">Pleasanton, CA</p>
-<ul>
+</ul></div></article>
+<article class="job company-group"><div class="company-heading"><img class="company-logo" src="assets/employers/kaiser.jpg" alt="Kaiser Permanente logo" width="64" height="64" loading="lazy" decoding="async"><div><h3>Kaiser Permanente</h3><p class="company-meta">Pleasanton, CA</p></div></div><div class="career-role"><h4>Application Security Intern</h4><p class="role-dates">January 2020 – July 2020</p><ul>
 <li>Created a Selenium automation script in Java to check TLS/SSL protocol versions using Qualys SSL Labs results.</li>
 <li>Processed access requests through Jira and developed training materials for self-service security assessments.</li>
-</ul>
-</div>
-</article>
+</ul></div></article>
 </section>
 <section class="section technical" id="skills" aria-labelledby="skills-title">
 <div class="container">
@@ -391,7 +400,7 @@
 (() => {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (motion.matches || !('IntersectionObserver' in window)) return;
-  const items = [...document.querySelectorAll('.section-head, .fit, .case, .job, .skills article, .lab, .qualifications, .contact-inner')];
+  const items = [...document.querySelectorAll('.section-head, .fit, .job, .skills article, .lab, .qualifications, .contact-inner')];
   const reveal = element => element.classList.remove('is-pending');
   let observer;
   try {
@@ -419,6 +428,50 @@
     items.forEach(reveal);
     if (observer) observer.disconnect();
   }
-})();</script>
+})();
+(() => {
+  const root = document.getElementById('project-story');
+  if (!root) return;
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const steps = [...root.querySelectorAll('.story-step')];
+  const panels = [...root.querySelectorAll('.story-panel')];
+  const links = [...root.querySelectorAll('.story-nav a')];
+  const count = root.querySelector('.story-count');
+  let frame = 0;
+  function render() {
+    frame = 0;
+    if (motion.matches) return;
+    const target = window.innerHeight * (window.innerWidth <= 680 ? .62 : .5);
+    let active = 0, distance = Infinity;
+    steps.forEach((step, index) => {
+      const box = step.getBoundingClientRect();
+      const next = Math.abs(box.top + box.height / 2 - target);
+      if (next < distance) { distance = next; active = index; }
+    });
+    steps.forEach((step, index) => step.classList.toggle('is-current', index === active));
+    panels.forEach((panel, index) => panel.classList.toggle('is-active', index === active));
+    links.forEach((link, index) => {
+      if (index === active) link.setAttribute('aria-current', 'step');
+      else link.removeAttribute('aria-current');
+    });
+    count.textContent = String(active + 1).padStart(2, '0') + ' / 04';
+    const first = steps[0].getBoundingClientRect();
+    const last = steps[steps.length - 1].getBoundingClientRect();
+    const start = first.top + first.height / 2;
+    const finish = last.top + last.height / 2;
+    root.style.setProperty('--story-progress', String(Math.max(0, Math.min(1, (target - start) / Math.max(1, finish - start)))));
+  }
+  function schedule() { if (!frame && !motion.matches) frame = requestAnimationFrame(render); }
+  function configure() {
+    document.documentElement.classList.toggle('story-enhanced', !motion.matches);
+    if (motion.matches) { if (frame) cancelAnimationFrame(frame); frame = 0; }
+    else schedule();
+  }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  motion.addEventListener('change', configure);
+  configure();
+})();
+</script>
 </body>
 </html>
